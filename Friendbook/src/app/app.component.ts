@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Friend} from "./friend";
 import {AddFriendService} from "./add-friend.service";
 
@@ -7,17 +7,23 @@ import {AddFriendService} from "./add-friend.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  private addFriendService: AddFriendService;
-   languageArray:Array<string> = ['HTML', 'css','javascript','php', 'angular', 'python']
-    friendModel = new Friend('','','',0,'')
+  // private addFriendService: AddFriendService;
+  languageArray: Array<string> = ['HTML', 'css', 'javascript', 'php', 'angular', 'python']
+  friendModel = new Friend(null, null, null, null, null)
 
   constructor() {
-    
+      // this.addFriendService = new AddFriendService()
   }
 
-  submitForm(){
-     addFriend(this.friendModel)
+  // set FriendService(friendService: AddFriendService){
+  //   this.addFriendService = friendService
+  // }
+
+  submitForm() {
+    // addFriend(this.friendModel)
     console.log(this.friendModel);
   }
 }
+
