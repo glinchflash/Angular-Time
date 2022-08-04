@@ -1,6 +1,6 @@
 {{ friendModel | json }}
 
-<form #FriendbookForm="ngForm" (ngSubmit)="submitForm()">
+<form #FriendbookForm="ngForm" novalidate (ngSubmit)="submitForm()">
   <label for="firstName">First name:</label><br>
   <input type="text" id="firstName" name="firstname" [(ngModel)]="friendModel.firstName"
          #firstname="ngModel" [class.invalid]="firstname.invalid && firstname.touched" pattern="[a-zA-Z ']*" required><br>
@@ -25,6 +25,6 @@
     </option>
   </select> <br>
 
-  <button type="submit"  [disabled]="FriendbookForm.form.invalid" >Submit</button>
+  <button [disabled]="FriendbookForm.form.invalid" >Submit</button>
 
 </form>
