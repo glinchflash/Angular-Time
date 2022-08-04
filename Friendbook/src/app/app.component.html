@@ -1,25 +1,25 @@
 {{ friendModel | json }}
 
-<form action="get" #FriendbookForm="ngForm" (ngSubmit)="submitForm()">
+<form #FriendbookForm="ngForm" (ngSubmit)="submitForm()">
   <label for="firstName">First name:</label><br>
   <input type="text" id="firstName" name="firstname" [(ngModel)]="friendModel._firstName"
-         #firstname="ngModel" [class.invalidFirstname]="firstname.invalid && firstname.touched" pattern="[a-zA-Z ]*" required><br>
+         #firstname="ngModel" [class.invalid]="firstname.invalid && firstname.touched" pattern="[a-zA-Z ]*" required><br>
 
   <label for="lastName">Last name:</label><br>
   <input type="text" id="lastName" name="lastname" [(ngModel)]="friendModel._lastName"
-         #lastname="ngModel" [class.invalidLastname]="lastname.invalid && lastname.touched" pattern="[a-zA-Z ]*" required><br>
+         #lastname="ngModel" [class.invalid]="lastname.invalid && lastname.touched" pattern="[a-zA-Z ]*" required><br>
 
   <label for="email">email:</label><br>
   <input type="email" id="email" name="email" [(ngModel)]="friendModel._email"
-         #email="ngModel" [class.invalidEmail]="email.invalid && email.touched" ngModel email="true" maxlength="16" minlength=""><br>
+         #email="ngModel" [class.invalid]="email.invalid && email.touched"   [email]="true" required><br>
 
   <label for="phoneNumber">Phone number:</label><br>
   <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="friendModel._phoneNumber"
-         #phoneNumber="ngModel" [class.invalidPhone]="phoneNumber.invalid && phoneNumber.touched" pattern="^[+ 0-9]*$" required><br>
+         #phoneNumber="ngModel" [class.invalid]="phoneNumber.invalid && phoneNumber.touched" pattern="^[+ 0-9]*$" maxlength="16" required><br>
 
   <label for="favLanguage">Favourite language:</label><br>
   <select name="favouriteLanguage " id="favLanguageSelection" [(ngModel)]="friendModel._favouriteLanguage"
-          #FavouriteLanguage="ngModel" [class.invalidLanguage]="FavouriteLanguage.invalid && FavouriteLanguage.touched"  required>
+          #FavouriteLanguage="ngModel" [class.invalid]="FavouriteLanguage.invalid && FavouriteLanguage.touched"  required>
     <option *ngFor="let language of languageArray" [value]="language" id="favLanguage">
       {{language}}
     </option>
