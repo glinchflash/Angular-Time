@@ -1,0 +1,23 @@
+/*.invalid{*/
+/*  border-color: red;*/
+/*}*/
+
+.invalidFirstname{
+  border-color: red;
+}
+
+.invalidLastname{
+  border-color: red;
+}
+
+.invalidEmail{
+  border-color: red;
+}
+
+.invalidPhone{
+  border-color: red;
+}
+
+.invalidLanguage{
+  border-color: red;
+}
