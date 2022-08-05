@@ -29,4 +29,11 @@
 
 </form>
 
-<div *ngFor="let friend of allFriends">{{friend}}</div>
+
+  <div>
+    <ul>
+    <li *ngFor="let friend of allFriends"> {{friend._email}}</li>
+    </ul>
+  </div>
+
+
