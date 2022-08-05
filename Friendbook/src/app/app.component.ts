@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Friend} from "./friend";
 import {AddFriendService} from "./add-friend.service";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
@@ -10,21 +9,17 @@ import {HttpClient} from "@angular/common/http";
 })
 
 export class AppComponent {
-  private addFriendService: AddFriendService;
   languageArray: Array<string> = ['HTML', 'css', 'javascript', 'php', 'angular', 'python']
   friendModel = new Friend(null, null, null, null, null)
 
-  constructor() {
-      this.addFriendService = new AddFriendService(new HttpClient())
+  constructor(private addFriendService : AddFriendService) {
   }
 
-  // set FriendService(friendService: AddFriendService){
-  //   this.addFriendService = friendService
-  // }
+
 
   submitForm() {
-    // addFriend(this.friendModel)
-    // console.log(this.friendModel);
+    let observable = this.addFriendService.addFriend(this.friendModel)
+    observable.subscribe(data => console.log("succes"), error => console.error('something went wrong'))
   }
 }
 
