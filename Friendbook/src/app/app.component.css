@@ -1,3 +1,98 @@
-.invalid{
-  border-color: red;
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 72px;
+  background: -webkit-linear-gradient(left, red , #0033ff, greenyellow);
+  background: -o-linear-gradient(right, red, #0033ff, greenyellow);
+  background: -moz-linear-gradient(right, red, #0033ff, greenyellow);
+  background: linear-gradient(to right, red , #0033ff, greenyellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: -webkit-linear-gradient(left, red , #0033ff, greenyellow,cyan);
+  background: -o-linear-gradient(right, red, #0033ff, greenyellow,cyan);
+  background: -moz-linear-gradient(right, red, #0033ff, greenyellow,cyan);
+  background: linear-gradient(to right, red , #0033ff, greenyellow, cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.invalid {
+  border: 5px solid orangered;
+}
+
+.friendsTable {
+  background: -webkit-linear-gradient(#45ff00, #fd9b07, #245fe5);
+  border: 2px solid pink;
+  float: right;
+  margin: 2rem;
+}
+
+thead {
+  background: -webkit-linear-gradient(#f65e5e, #9b910f, #0034ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+td {
+  border: 2px solid pink;
+  -webkit-text-fill-color:cyan;
+}
+
+.pageContainer {
+  display: grid;
+}
+
+.fromContainer {
+  float: left;
+  margin-left: 3rem;
+  background: -webkit-linear-gradient(#ff0000, #218550, #033394,#FF0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+input, select{
+  background: transparent;
+  -webkit-text-fill-color: darkblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+option{
+  background: cyan;
+  color: yellow;
+  font-size: large;
+}
+
+
+button:disabled{
+  background: red;
+  -webkit-text-fill-color: darkblue;
+  text-decoration: line-through;
+  font-size: large;
+}
+
+button{
+  background: transparent;
+  font-weight: bold;
+  -webkit-text-fill-color: cyan;
+  width: 5rem;
+  height: 2.5rem;
+}
+
+.img {
+  text-align: center;
+
 }
