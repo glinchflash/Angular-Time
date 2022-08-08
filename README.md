@@ -6,7 +6,7 @@
 
 
 ## mission
-You have been part of becode for quite some time, and you've made a lot of friends in the process. Make an Angular application on which your friends can fill in their data so you can have it in your node.js friendlist api.
+You have been part of becode for quite some time, and you've made a lot of friends in the process. Make an Angular application on which your friends can fill in their data, so you can have it in your node.js friendlist api.
 And learning the following objectives:
  - Use the angular cli commands
  - Have a basic understanding of typescript
@@ -24,15 +24,15 @@ And learning the following objectives:
     - -[x] npm: <code>npm -v</code> or <code>npm -version</code>
 3. -[x] Install the Angular cli with <code>npm install -g @angular/cli</code> and check afterwards if you have it with <code>ng version</code>
 4. -[x] Navigate to the root of your clone of this repository in the terminal and enter the command <code>ng new project-name</code>. You should now have 2 folders called "server", your node API, and "project-name", your angular app.
-5. -[x] Go inside of the "project-name" folder and run the command <code>ng serve --port 4500</code>. You can now check out your angular app on <code>localhost:4500</code>.
+5. -[x] Go inside the "project-name" folder and run the command <code>ng serve --port 4500</code>. You can now check out your angular app on <code>localhost:4500</code>.
 6. -[x] In your editor, navigate to <code>project-name/src/app</code>. In here you'll find 2 things.
     - The template, app.component.html
     - The component, app.component.ts.
     - The view you see in the page is produced by the combination of that <strong>template</strong> and the <strong>component</strong> that brings the logic to the template.
     - You should never pay attention to .spec files, these are for unit testing which is out of scope for this exercise.
-7. -[x] Empty the "AppComponent" class and the template. The template file should be completely empty. Inside of the AppComponent class you'll write your logic and in the template you can use it and write the html.
-8. -[x] In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
-9. -[x] You might have already added a select input for the languages with the options inside of it. This can be optimised by putting the names of the languages inside of an array in your component class. Next, you can use the ngFor loop to generate all the options, way more efficient right?
+7. -[x] Empty the "AppComponent" class and the template. The template file should be completely empty. Inside the AppComponent class you'll write your logic and in the template you can use it and write the html.
+8. -[x] In the HTML file, add a form with the required inputs at least. Go take a look at the must-haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
+9. -[x] You might have already added a select input for the languages with the options inside it. This can be optimised by putting the names of the languages inside an array in your component class. Next, you can use the ngFor loop to generate all the options, way more efficient right?
 10. -[x] Now you will have to bind the data to your form
     - In your app.module.ts, import the FormsModule from @angular/forms. Also add it to the imports array.
     - Add <code>#formName="ngForm"</code> to your form. This will make "formName" a variable which contains all the data of the form in realtime.
@@ -44,15 +44,15 @@ And learning the following objectives:
     - Open the generated friend.ts file and add a constructor to the class. In there, depending on which inputs you used, add the corresponding properties. Don't forget to typehint them. Thanks typescript!
     - In your component class, instantiate the friendModel through the friend class with all the properties set to null. To do this you'll also need to import the Friend class.
     - Next, in your HTML, change the ngModel of your inputs to be like this: <code>[(ngModel)]="friendModel.propertyName"</code>. Of course, replace the propertyName with the corresponding name of your property.
-    - To test if this works, go back to the top of your HTML and change <code>{{ formName.value | json }}</code> to <code>{{ friendModel | json }}</code>. You'll see that at the top of your page in the browser, nothing really changed. Now your data is binded to the friend model.
+    - To test if this works, go back to the top of your HTML and change <code>{{ formName.value | json }}</code> to <code>{{ friendModel | json }}</code>. You'll see that at the top of your page in the browser, nothing really changed. Now your data is bound to the friend model.
 12. -[x] Now we need to display when a field is invalid to the user.
     - Add the required property to all inputs, this will make sure that angulars "invalid" tag gets added to the fields that are not filled in.
     - Make a class, or use a bootstrap class, that makes it clear that something is wrong with that input. For example, a red border color.
     - To conditionally add that class to your input, add <code>[class.yourClassName]="property.invalid"</code>. This means the class "yourClassName" will be applied to the input when a specific property is invalid.
-    - Now the fields that are empty, and thus invalid, will have the invalid class applied. However, we don't want this when the user hasn't even touched the input. To add this functionality, change the condition to <code>[class.yourClassName]="property.invalid && property.touched"</code>.
+    - Now the fields that are empty, and thus invalid, will have the invalid class applied. However, we don't want this when the user has not even touched the input. To add this functionality, change the condition to <code>[class.yourClassName]="property.invalid && property.touched"</code>.
     - The only way fields are invalid now, is when there's nothing in it and the user has touched the input already. However, if the user would for example put a sentence in the phone number field, we want to display it as invalid too.
     - To do this, add the pattern property to the input field and as a value add the regular expression that it would have to suffice. Go to https://regex101.com/ if you want to test out and learn more about regex.
-    - Regex is hard and you don't have to do it perfectly, however it is manageable to
+    - Regex is hard, and you don't have to do it perfectly, however it is manageable to
         - Have no numbers in names
         - Have no letters in phone numbers
         - Have no special code characters allowed anywhere if they're not needed.
@@ -68,7 +68,7 @@ And learning the following objectives:
     - To add this friend to your friendlist server, we'll need to make a service for it. We'll use the cli for this and input the command <code>ng g s addFriend</code>. This means, a"ng"ular "g"enerate "s"ervice with name "addFriendService", when you generate a service you'll see that after the name you've given it will automatically add "Service" after it.
     - In your newly generated addFriend.service.ts file, import the HttpClient. In your addFriend class, add a new private property called http to the constructor. Typehint it to be of type HttpClient.
     - You'll also have to import the HttpClientModule in your app.module.ts, also add it to the imports array below.
-15. -[x] We now have our data on submit and we're in a position to start http requests. Now we want to post our data to a server.
+15. -[x] We now have our data on submit, and we're in a position to start http requests. Now we want to post our data to a server.
     - In the service, make a method called addFriend and give it a parameter, typehint it to be of the Friend type. You'll also need to import Friend.
     - In this method, write a post request. It looks like this: <code>this.http.post<any>(url, data)</code>. Return it afterwards, what you'll get back in something called an observable. http is the property HttpClient, <any> is the type of data your post can contain and url is the url you're sending the data to.
     - We'll get back to the url later. For now, make a property called 'url' and leave it as an empty string.
@@ -94,7 +94,7 @@ And learning the following objectives:
     - To do it on page load, import OnInit. Next your AppComponent class has to implement it.
     - To make something happen on pageload, in the class add <code>ngOnInit(): any { something happens }</code>. In here, call your fetch function like we did previously for the form submit.
     - We now have our friend list updated in the property allFriends of the component class.
-    -  To check if you have your friends data console log it.
+    -  To check if you have your friends' data console log it.
 18. -[x] Now we can display the friends in the template using the property allFriends.
     - To do this we'll use the ngFor loop, add the following code to a div: <code>*ngFor="let friend of allFriends"</code>.
     - In this div, if you enter {{ friend.email }} for example. You'll see that on your page you'll see all the emails of your friends displayed.
