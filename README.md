@@ -152,6 +152,5 @@ And learning the following objectives:
 ---
 ### parting gift
 
-[//]: # (![scholastika]&#40;Friendbook/src/assets/images/scholastika.jpg&#41;)
+![scholastika](Friendbook/src/assets/images/scholastika.jpg)
 
-<img src="Friendbook/src/assets/images/hoverme.png" onmouseover="this.src='Friendbook/src/assets/images/scholastika.jpg'" onmouseout="this.src='Friendbook/src/assets/images/hoverme.png'">
