@@ -6,7 +6,7 @@
 
 
 ## mission
-You have been part of becode for quite some time, and you've made a lot of friends in the process. Make an Angular application on which your friends can fill in their data, so you can have it in your node.js friendlist api.
+You have been part of becode for quite some time, and you've made a lot of friends in the process. Make an Angular application on which your friends can fill in their data, so you can have it in your node.js friend list api.
 And learning the following objectives:
  - Use the angular cli commands
  - Have a basic understanding of typescript
@@ -65,7 +65,7 @@ And learning the following objectives:
 14. -[x] Let's submit the data to a server now, but before we can do that we need to be able to do something on submit and get access to http requests.
     - If you add the ngSubmit property to your form, you can bind a function to it and use that function in your component class to trigger it on submit. This is how it looks like: <code>(ngSubmit)="yourFunction()"</code>.
     - In your component class, define the function and console log your friend model. Now when you submit you'll see the data appear in your console.
-    - To add this friend to your friendlist server, we'll need to make a service for it. We'll use the cli for this and input the command <code>ng g s addFriend</code>. This means, a"ng"ular "g"enerate "s"ervice with name "addFriendService", when you generate a service you'll see that after the name you've given it will automatically add "Service" after it.
+    - To add this friend to your friend list server, we'll need to make a service for it. We'll use the cli for this and input the command <code>ng g s addFriend</code>. This means, a"ng"ular "g"enerate "s"ervice with name "addFriendService", when you generate a service you'll see that after the name you've given it will automatically add "Service" after it.
     - In your newly generated addFriend.service.ts file, import the HttpClient. In your addFriend class, add a new private property called http to the constructor. Typehint it to be of type HttpClient.
     - You'll also have to import the HttpClientModule in your app.module.ts, also add it to the imports array below.
 15. -[x] We now have our data on submit, and we're in a position to start http requests. Now we want to post our data to a server.
@@ -146,9 +146,9 @@ And learning the following objectives:
 
 ### weird interactions I noticed
 - when setting the properties of the friend class private, we were still able to get them even without getters and setters (did revert it to use getters and setters cause that just made more sense to me)
-- button doesn't need type submit, but when adding extra buttons, they all act as a submit button aswell (so what happens when we want to add a button for something else?)
+- button doesn't need type submit, but when adding extra buttons, they all act as a submit button as well (so what happens when we want to add a button for something else?)
 - properties of friend class have to be named the same as the allFriends array in the server
-- angular has some fluidity which for me was a bit weird to adept to (like the ```[disabled]="FriendbookForm.form.invalid"```) which is makes alot of sense, but still feels a bit weird.
+- angular has some fluidity which for me was a bit weird to adept to (like the ```[disabled]="FriendbookForm.form.invalid"```) which is makes a lot of sense, but still feels a bit weird.
 ---
 ### parting gift
 ![scholastika](Friendbook/src/assets/images/scholastika.jpg)
