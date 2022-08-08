@@ -138,6 +138,7 @@ And learning the following objectives:
 
 ### What did I learn
 - basic angular syntax
+- adding a class attribute based on conditions (touched/invalid) which I find very useful
 - ngFor loops
 - using a self-made js server to connect to
 - some basic in-built functionality of angular (OnInit, HttpClient)
