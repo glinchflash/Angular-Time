@@ -151,4 +151,7 @@ And learning the following objectives:
 - angular has some fluidity which for me was a bit weird to adept to (like the ```[disabled]="FriendbookForm.form.invalid"```) which is makes a lot of sense, but still feels a bit weird.
 ---
 ### parting gift
-![scholastika](Friendbook/src/assets/images/scholastika.jpg)
+
+[//]: # (![scholastika]&#40;Friendbook/src/assets/images/scholastika.jpg&#41;)
+
+<img src="Friendbook/src/assets/images/hoverme.png" onmouseover="this.src='Friendbook/src/assets/images/scholastika.jpg'" onmouseout="this.src='Friendbook/src/assets/images/hoverme.png'">
