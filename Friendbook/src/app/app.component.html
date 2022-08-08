@@ -1,39 +1,66 @@
 {{ friendModel | json }}
 
-<form #FriendbookForm="ngForm" novalidate (ngSubmit)="submitForm()">
-  <label for="firstName">First name:</label><br>
-  <input type="text" id="firstName" name="firstname" [(ngModel)]="friendModel.firstName"
-         #firstname="ngModel" [class.invalid]="firstname.invalid && firstname.touched" pattern="[a-zA-Z ']*" required><br>
+<h1>Welcome to Scholastika's Friendbook</h1>
+<div class="img">
+<img src="assets/images/scholastika.jpg" alt="your mating partner" width="100" height="150">
+</div>
+<h2>Please don't leave it empty</h2>
 
-  <label for="lastName">Last name:</label><br>
-  <input type="text" id="lastName" name="lastname" [(ngModel)]="friendModel.lastName"
-         #lastname="ngModel" [class.invalid]="lastname.invalid && lastname.touched" pattern="[a-zA-Z ']*" required><br>
+<div class="fromContainer">
+  <form #FriendbookForm="ngForm" novalidate (ngSubmit)="submitForm()">
+    <label for="firstName">First name:</label><br>
+    <input type="text" placeholder="First name" id="firstName" name="firstname" [(ngModel)]="friendModel.firstName"
+           #firstname="ngModel" [class.invalid]="firstname.invalid && firstname.touched" pattern="[a-zA-Z ']*"
+           required><br>
 
-  <label for="email">email:</label><br>
-  <input type="email" id="email" name="email" [(ngModel)]="friendModel.email"
-         #email="ngModel" [class.invalid]="email.invalid && email.touched"   [email]="true" required><br>
+    <label for="lastName">Last name:</label><br>
+    <input type="text" placeholder="Last name" id="lastName" name="lastname" [(ngModel)]="friendModel.lastName"
+           #lastname="ngModel" [class.invalid]="lastname.invalid && lastname.touched" pattern="[a-zA-Z ']*"
+           required><br>
 
-  <label for="phoneNumber">Phone number:</label><br>
-  <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="friendModel.phoneNumber"
-         #phoneNumber="ngModel" [class.invalid]="phoneNumber.invalid && phoneNumber.touched" pattern="[+/ )0-9]*" maxlength="16" required><br>
+    <label for="email">email:</label><br>
+    <input type="email" placeholder="Email" id="email" name="email" [(ngModel)]="friendModel.email"
+           #email="ngModel" [class.invalid]="email.invalid && email.touched" [email]="true" required><br>
 
-  <label for="favLanguage">Favourite language:</label><br>
-  <select name="favouriteLanguage " id="favLanguageSelection" [(ngModel)]="friendModel.favouriteLanguage"
-          #FavouriteLanguage="ngModel" [class.invalid]="FavouriteLanguage.invalid && FavouriteLanguage.touched"  required>
-    <option *ngFor="let language of languageArray" [value]="language" id="favLanguage">
-      {{language}}
-    </option>
-  </select> <br>
+    <label for="phoneNumber">Phone number:</label><br>
+    <input type="tel" placeholder="Phone number" id="phoneNumber" name="phoneNumber" [(ngModel)]="friendModel.phoneNumber"
+           #phoneNumber="ngModel" [class.invalid]="phoneNumber.invalid && phoneNumber.touched" pattern="[+/ )0-9]*"
+           maxlength="16" required><br>
 
-  <button [disabled]="FriendbookForm.form.invalid" >Submit</button>
+    <label for="favLanguage">Favourite language:</label><br>
+    <select name="favouriteLanguage" id="favLanguageSelection" [(ngModel)]="friendModel.favouriteLanguage"
+            #FavouriteLanguage="ngModel" [class.invalid]="FavouriteLanguage.invalid && FavouriteLanguage.touched"
+            required>
+      <option *ngFor="let language of languageArray" [value]="language" id="favLanguage">
+        {{language}}
+      </option>
+    </select> <br>
 
-</form>
+    <button [disabled]="FriendbookForm.form.invalid">Submit</button>
+  </form>
+</div>
 
-
-  <div>
-    <ul>
-    <li *ngFor="let friend of allFriends"> {{friend._email}}</li>
-    </ul>
-  </div>
-
+<div>
+  <table class="friendsTable">
+    <caption></caption>
+    <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email adress</th>
+      <th>Phone number</th>
+      <th>Favourite language</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let friend of allFriends">
+      <td>{{friend._firstName}}</td>
+      <td>{{friend._lastName}}</td>
+      <td>{{friend._email}}</td>
+      <td>{{friend._phoneNumber}}</td>
+      <td>{{friend._favouriteLanguage}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 
