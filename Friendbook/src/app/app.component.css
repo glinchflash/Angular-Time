@@ -94,5 +94,15 @@ button{
 
 .img {
   text-align: center;
+}
 
+caption {
+  background: -webkit-linear-gradient(left, red, #0033ff, greenyellow);
+  background: -o-linear-gradient(right, red, #0033ff, greenyellow);
+  background: -moz-linear-gradient(right, red, #0033ff, greenyellow);
+  background: linear-gradient(to right, red, #0033ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: bold;
 }
