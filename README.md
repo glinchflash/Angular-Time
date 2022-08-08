@@ -92,7 +92,7 @@ And learning the following objectives:
     - Add a property to your component class called allFriends and in the fetch where you can access the fetched data, assign the value of the data to that property.
     - We now have our fetch working, let's call it when we submit the form first. To do this in the success part of the subscribe, call the function with url 'http://localhost:PORT/allFriends'.
     - To do it on page load, import OnInit. Next your AppComponent class has to implement it.
-    - To make something happen on pageload, in the class add <code>ngOnInit(): any { something happens }</code>. In here, call your fetch function like we did previously for the form submit.
+    - To make something happen on page load, in the class add <code>ngOnInit(): any { something happens }</code>. In here, call your fetch function like we did previously for the form submit.
     - We now have our friend list updated in the property allFriends of the component class.
     -  To check if you have your friends' data console log it.
 18. -[x] Now we can display the friends in the template using the property allFriends.
@@ -102,7 +102,7 @@ And learning the following objectives:
 19. -[x] You now have all the must-have features. Congratulations! If you have time left, be sure to take a look at the nice-to-have features. Here are some suggestions as well:
     - Try removing people from your friend list based on email. Post the email of a friend, find the friend on the server and pop it out of the array.
     - Try updating the data from a friend based on email. Same thing, post the email and find that friend, update the values.
-    - Make seperate pages by generating new components! You'll have to look into routing as well!
+    - Make separate pages by generating new components! You'll have to look into routing as well!
     - Get creative!
 20. -[x] Congratulations, you survived the first steps of Angular and Node. I'm proud of you!(So am i :D)
 
