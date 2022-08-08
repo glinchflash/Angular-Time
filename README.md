@@ -3,7 +3,7 @@
 ## page preview
 
 ![page preview](Friendbook/src/assets/images/pagePreview.PNG)
-
+---
 
 ## mission
 You have been part of becode for quite some time, and you've made a lot of friends in the process. Make an Angular application on which your friends can fill in their data, so you can have it in your node.js friend list api.
@@ -105,7 +105,7 @@ And learning the following objectives:
     - Make separate pages by generating new components! You'll have to look into routing as well!
     - Get creative!
 20. -[x] Congratulations, you survived the first steps of Angular and Node. I'm proud of you!(So am i :D)
-
+---
 
 ### nice-to-haves
 - -[x] Make sure the email and phone number are actually emails and phone numbers.
@@ -129,7 +129,7 @@ And learning the following objectives:
     - An amount of random friends from your list
     - A list of all the people between the age of 30 and 40
     - ...
-
+---
 
 ### personal Nice-to-haves
 - -[x] style page
