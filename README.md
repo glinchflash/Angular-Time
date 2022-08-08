@@ -134,7 +134,20 @@ And learning the following objectives:
 ### personal Nice-to-haves
 - -[x] style page
 - -[x] make it 'special'
+---
 
+### What did I learn
+- basic angular syntax
+- ngFor loops
+- using a self-made js server to connect to
+- some basic in-built functionality of angular (OnInit, HttpClient)
+---
 
+### weird interactions I noticed
+- when setting the properties of the friend class private, we were still able to get them even without getters and setters (did revert it to use getters and setters cause that just made more sense to me)
+- button doesn't need type submit, but when adding extra buttons, they all act as a submit button aswell (so what happens when we want to add a button for something else?)
+- properties of friend class have to be named the same as the allFriends array in the server
+- angular has some fluidity which for me was a bit weird to adept to (like the ```[disabled]="FriendbookForm.form.invalid"```) which is makes alot of sense, but still feels a bit weird.
+---
 ### parting gift
 ![scholastika](Friendbook/src/assets/images/scholastika.jpg)
