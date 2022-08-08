@@ -2,7 +2,7 @@
 
 ## page preview
 
-![img.png](Friendbook/src/assets/images/pagePreview.PNG)
+![page preview](Friendbook/src/assets/images/pagePreview.PNG)
 
 
 ## mission
@@ -134,3 +134,7 @@ And learning the following objectives:
 ### personal Nice-to-haves
 - -[x] style page
 - -[x] make it 'special'
+
+
+### parting gift
+![scholastika](Friendbook/src/assets/images/scholastika.jpg)
